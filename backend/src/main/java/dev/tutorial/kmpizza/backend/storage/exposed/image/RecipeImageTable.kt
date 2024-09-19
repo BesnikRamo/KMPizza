@@ -2,9 +2,8 @@ import dev.tutorial.kmpizza.backend.storage.exposed.recipe.RecipeTable
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.ReferenceOption
 
-internal object InstructionTable : IntIdTable("instructions") {
-    val order = integer("order")
-    val description = varchar("description", 100)
+object RecipeImageTable : IntIdTable("recipeImages") {
+    val image = varchar("image", 1024)
     val recipe = reference(
         "recipe_id",
         RecipeTable,

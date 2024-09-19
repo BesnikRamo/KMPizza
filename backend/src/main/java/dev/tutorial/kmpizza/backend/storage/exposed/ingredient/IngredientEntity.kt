@@ -1,4 +1,6 @@
 
+import dev.tutorial.kmpizza.backend.storage.exposed.recipe.RecipeEntity
+import dev.tutorial.kmpizza.model.Ingredient
 import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
 import org.jetbrains.exposed.dao.id.EntityID

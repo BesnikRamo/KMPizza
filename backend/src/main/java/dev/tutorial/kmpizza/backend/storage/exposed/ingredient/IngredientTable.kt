@@ -1,3 +1,4 @@
+import dev.tutorial.kmpizza.backend.storage.exposed.recipe.RecipeTable
 import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.ReferenceOption
 

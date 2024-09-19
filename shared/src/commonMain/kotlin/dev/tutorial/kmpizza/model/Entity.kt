@@ -1,3 +1,5 @@
+package dev.tutorial.kmpizza.model
+
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -43,5 +45,5 @@ data class RecipeResponse(
     val title: String,
     val ingredients: List<Ingredient>,
     val instructions: List<Instruction>,
-    //val images: List<RecipeImage>
+    val images: List<RecipeImage>
 )

@@ -1,3 +1,4 @@
+import dev.tutorial.kmpizza.model.Recipe
 
 class RecipeRemoteSource(
     private val recipesApi: RecipesApi

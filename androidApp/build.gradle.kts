@@ -58,4 +58,5 @@ dependencies {
     implementation(Versions.Android.MATERIAL_COMPONENTS)
     implementation(libs.compose.material3)
     implementation(Versions.Android.KOIN_ANDROID_MAIN)
+    implementation (Versions.Android.COMPOSE_COIL)
 }

@@ -26,14 +26,14 @@ private fun Routing.getRecipes(localSource: LocalSource) {
     }
 }
 
-/*private fun Routing.getRecipe(localSource: LocalSource) {
+private fun Routing.getRecipe(localSource: LocalSource) {
     get("/recipes/{recipeId}") {
         val recipeId = call.parameters["recipeId"]!!.toLong()
         localSource.getRecipe(recipeId).let {
             call.respond(it)
         }
     }
-}*/
+}
 
 private fun Routing.pizza(localSource: LocalSource) {
 

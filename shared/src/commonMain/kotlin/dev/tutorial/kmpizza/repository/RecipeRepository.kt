@@ -1,3 +1,5 @@
+import dev.tutorial.kmpizza.model.Recipe
+import dev.tutorial.kmpizza.model.RecipeResponse
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

@@ -13,6 +13,7 @@ object Versions {
     const val COMPOSE_ACT = "1.6.0-alpha01"
     const val COMPOSE_NAV = "2.5.0-alpha03"
     const val MATERIAL = "1.5.0"
+    const val COIL = "2.5.0"
 
     object Jvm {
         const val KTOR_AUTH = "io.ktor:ktor-auth:$KTOR_VERSION"
@@ -53,6 +54,8 @@ object Versions {
 
         const val MATERIAL_COMPONENTS = "com.google.android.material:material:$MATERIAL"
         const val KOIN_ANDROID_MAIN = "io.insert-koin:koin-android:$KOIN_VERSION"
+
+        const val COMPOSE_COIL = "io.coil-kt:coil-compose:$COIL"
     }
     object iOS {
         const val KTOR_CLIENT = "io.ktor:ktor-client-ios:$KTOR_VERSION"

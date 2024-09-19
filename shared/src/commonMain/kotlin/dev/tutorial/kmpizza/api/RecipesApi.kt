@@ -1,4 +1,7 @@
 import dev.tutorial.kmpizza.api.KtorApi
+import dev.tutorial.kmpizza.model.Recipe
+import dev.tutorial.kmpizza.model.RecipeResponse
+import dev.tutorial.kmpizza.model.RecipeUiModel
 
 import io.ktor.client.request.*
 
