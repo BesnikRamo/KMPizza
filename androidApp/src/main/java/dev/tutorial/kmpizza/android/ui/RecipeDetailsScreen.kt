@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -11,6 +12,7 @@ import coil.compose.rememberAsyncImagePainter
 import dev.tutorial.kmpizza.android.R
 import dev.tutorial.kmpizza.model.Ingredient
 import dev.tutorial.kmpizza.model.Instruction
+import dev.tutorial.kmpizza.android.ui.utils.TopBar
 
 @Composable
 public fun RecipeDetailsScreen(recipeId: Long, upPress: () -> Unit) {
@@ -19,6 +21,9 @@ public fun RecipeDetailsScreen(recipeId: Long, upPress: () -> Unit) {
     val recipe = recipes.find { it.id == recipeId }
     val placeholder = "https://m.media-amazon.com/images/I/413qxEF0QPL._AC_.jpg"
 
+    Scaffold(
+        topBar = { TopBar(upPress = upPress) })
+    {  padding ->
     Column(
         modifier = Modifier.padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -30,6 +35,7 @@ public fun RecipeDetailsScreen(recipeId: Long, upPress: () -> Unit) {
         SectionHeader(title = "Instructions")
         recipe?.let { Instructions(it.instructions) }
     }
+        }
 }
 
 @Composable

@@ -37,13 +37,7 @@ public fun MainScreen() {
                     recipeId = it.arguments!!.getLong("id"),
                     upPress = { navController.popBackStack() })
             }
-            composable(
-                Navigation.RecipeDetails.route
-            ) {
-                RecipeDetailsScreen(
-                    recipeId = it.arguments!!.getLong("id"),
-                    upPress = { navController.popBackStack() })
-            }
+
 
         })
 }
