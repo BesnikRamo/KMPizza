@@ -72,17 +72,3 @@ fun RecipeListItemPreview(
     val recipe = RecipeResponse(id = 0, title = title, listOf(), listOf(), listOf())
     RecipeListItem(recipe) {}
 }
-
-
-/*@Composable
-fun Recipes(
-    items: List<RecipeResponse>
-) {
-    LazyColumn {
-        itemsIndexed(items = items,
-            itemContent = { _, item ->
-                Text(text = item.title)
-            })
-
-    }
-}*/
