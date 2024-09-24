@@ -2,13 +2,13 @@ package dev.tutorial.kmpizza.model
 
 import kotlinx.serialization.Serializable
 
-@Serializable
-data class Recipe(
-    val id: Long = 0,
-    val title: String,
-    val ingredients: List<Ingredient>,
-    val instructions: List<Instruction>
-)
+//@Serializable
+//data class Recipe(
+//    val id: Long = 0,
+//    val title: String,
+//    val ingredients: List<Ingredient>,
+//    val instructions: List<Instruction>
+//)
 
 @Serializable
 data class RecipeRequest(

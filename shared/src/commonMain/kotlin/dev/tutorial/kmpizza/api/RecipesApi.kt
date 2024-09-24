@@ -1,7 +1,6 @@
 import dev.tutorial.kmpizza.api.KtorApi
-import dev.tutorial.kmpizza.model.Recipe
+import dev.tutorial.kmpizza.model.RecipeRequest
 import dev.tutorial.kmpizza.model.RecipeResponse
-import dev.tutorial.kmpizza.model.RecipeUiModel
 
 import io.ktor.client.request.*
 
@@ -28,10 +27,15 @@ class RecipesApi(private val ktorApi: KtorApi) : KtorApi by ktorApi {
         }
     }
 
-    suspend fun postRecipe(recipe: Recipe): Long  {
-        return client.post {
-            json()
-            apiUrl(RECIPES_BASE_URL)
+    suspend fun postRecipe(recipeRequest: RecipeRequest): Long? {
+        try {
+            return client.post<Long> {
+                json()
+                apiUrl(RECIPES_BASE_URL)
+                setBody(recipeRequest)
+            }
+        } catch (e: Exception) {
+            return null
         }
     }
 }

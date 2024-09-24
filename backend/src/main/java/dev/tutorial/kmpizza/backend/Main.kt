@@ -1,6 +1,6 @@
 package dev.tutorial.kmpizza.backend
 
-import LocalSource
+import dev.tutorial.kmpizza.backend.storage.exposed.LocalSource
 import api
 import getKoinModule
 import io.ktor.application.*
