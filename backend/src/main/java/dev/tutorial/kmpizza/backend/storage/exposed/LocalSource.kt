@@ -13,6 +13,6 @@ internal interface LocalSource {
     suspend fun addInstruction(recipeId: Long, instruction: Instruction): Long
     suspend fun addRecipe(recipe: RecipeRequest): Long
     suspend fun getRecipes(): List<RecipeResponse>
-     suspend fun getRecipe(recipeId: Long) : RecipeResponse
+    suspend fun getRecipe(recipeId: Long) : RecipeResponse
     suspend fun saveImage(recipeId: Long, image: File)
 }
