@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import dev.tutorial.kmpizza.model.RecipeResponse
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun RecipesScreen(onRecipeClicked: (RecipeResponse) -> Unit, onAddRecipe: () -> Unit) {
     val viewModel = remember { RecipeViewModel() }
@@ -31,14 +33,17 @@ fun RecipesScreen(onRecipeClicked: (RecipeResponse) -> Unit, onAddRecipe: () -> 
         floatingActionButton = {
             FloatingActionButton(onClick = onAddRecipe) {
                 Icon(
-                    imageVector = Icons.Default.Add, // Use Material Design Plus icon
+                    imageVector = Icons.Default.Add,
                     contentDescription = "Add Recipe",
-                    tint = Color.White // Optional: You can change the icon color
+                    tint = Color.White
                 )
             }
-        }
-    ) { padding ->
-        Recipes(items = recipes, onRecipeClicked = onRecipeClicked)
+
+        }) {
+        Recipes(
+            items = recipes,
+            onRecipeClicked = onRecipeClicked
+        )
     }
 }
 

@@ -1,3 +1,8 @@
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.NoActionBar"/>
+    <string name="name">Name</string>
+    <string name="amount">Amount</string>
+    <string name="metric">Metric</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="title">What is the name of this dish?</string>
 </resources>

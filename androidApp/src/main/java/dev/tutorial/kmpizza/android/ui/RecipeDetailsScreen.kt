@@ -1,6 +1,8 @@
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -13,18 +15,20 @@ import dev.tutorial.kmpizza.android.R
 import dev.tutorial.kmpizza.model.Ingredient
 import dev.tutorial.kmpizza.model.Instruction
 import dev.tutorial.kmpizza.android.ui.utils.TopBar
+import dev.tutorial.kmpizza.viewmodel.RecipeDetailsViewModel
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 public fun RecipeDetailsScreen(recipeId: Long? = null, upPress: () -> Unit) {
-    val viewModel = remember { RecipeViewModel() }
-    val recipes by viewModel.recipes.collectAsState()
-    val recipe = recipes.find { it.id == recipeId }
+    val viewModel = remember { RecipeDetailsViewModel(recipeId) }
+    val recipe by viewModel.recipe.collectAsState()
     val placeholder = "https://m.media-amazon.com/images/I/413qxEF0QPL._AC_.jpg"
+    val scrolling = Modifier.verticalScroll(rememberScrollState())
 
     Scaffold(
         topBar = { TopBar(upPress = upPress) })
-    {  padding ->
-    Column(
+    {
+        Column(
         modifier = Modifier.padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
