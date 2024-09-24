@@ -7,7 +7,7 @@ data class RecipeUiModel(
     val ingredients: List<Ingredient> = listOf(),
     val instructions: List<Instruction> = listOf(),
     val images: List<RecipeImage> = listOf(),
-    val localImage: ImageFile? = null
+//    val localImage: ImageFile? = null
 )
 
 fun RecipeResponse.toRecipeUiModel() = RecipeUiModel(

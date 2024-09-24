@@ -1,5 +1,6 @@
 package dev.tutorial.kmpizza.api
 
+import dev.tutorial.kmpizza.model.RecipeRequest
 import io.ktor.client.*
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
@@ -27,5 +28,9 @@ class KtorApiImpl() : KtorApi {
 
     override fun HttpRequestBuilder.json() {
         contentType(ContentType.Application.Json)
+    }
+
+    override fun setBody(recipeRequest: RecipeRequest) {
+        TODO("Not yet implemented")
     }
 }

@@ -38,6 +38,14 @@ public fun MainScreen() {
                     upPress = { navController.popBackStack() })
             }
 
+            composable(
+                Navigation.RecipeDetails.route
+            ) {
+                RecipeDetailsScreen(
+                    recipeId = null,
+                    upPress = { navController.popBackStack() })
+
+            }
 
         })
 }

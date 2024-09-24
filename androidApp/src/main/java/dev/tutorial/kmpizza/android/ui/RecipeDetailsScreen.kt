@@ -15,7 +15,7 @@ import dev.tutorial.kmpizza.model.Instruction
 import dev.tutorial.kmpizza.android.ui.utils.TopBar
 
 @Composable
-public fun RecipeDetailsScreen(recipeId: Long, upPress: () -> Unit) {
+public fun RecipeDetailsScreen(recipeId: Long? = null, upPress: () -> Unit) {
     val viewModel = remember { RecipeViewModel() }
     val recipes by viewModel.recipes.collectAsState()
     val recipe = recipes.find { it.id == recipeId }
