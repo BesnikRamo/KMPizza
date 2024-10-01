@@ -6,7 +6,7 @@ import dev.tutorial.kmpizza.backend.storage.exposed.recipe.RecipeTable
 import dev.tutorial.kmpizza.backend.storage.exposed.recipe.toRecipeResponse
 import dev.tutorial.kmpizza.model.Ingredient
 import dev.tutorial.kmpizza.model.Instruction
-import dev.tutorial.kmpizza.model.Recipe
+import dev.tutorial.kmpizza.model.RecipeRequest
 import dev.tutorial.kmpizza.model.RecipeResponse
 import io.ktor.application.Application
 import kotlinx.coroutines.ObsoleteCoroutinesApi
@@ -97,7 +97,7 @@ internal class LocalSourceImpl(
             }
         }
 
-    override suspend fun addRecipe(recipe: Recipe) = withContext(dispatcher) {
+    override suspend fun addRecipe(recipe: RecipeRequest) = withContext(dispatcher) {
         withContext(dispatcher) {
             val recipeId = transaction {
                 RecipeEntity.new {

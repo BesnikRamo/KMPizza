@@ -8,7 +8,7 @@ internal fun Routing.api(localSource: LocalSource) {
     pizza(localSource)
     addRecipe(localSource)
     getRecipes(localSource)
-    //getRecipe(localSource)
+    getRecipe(localSource)
 }
 
 
